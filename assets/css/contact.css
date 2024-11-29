@@ -1,0 +1,90 @@
+.contact-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contact-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-section h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-section .form-control {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-section .btn {
+  background-color: var(--color-one);
+  color: white;
+  border-radius: 0;
+  padding: 10px 20px;
+}
+
+.contact-section .btn i {
+  margin-right: 8px;
+}
+
+.contact-section .btn:hover {
+  background-color: var(--color-two);
+  color: #000000;
+} 
+
+.contact-info {
+  background-color: var(--color-one);
+  color: white;
+  padding: 40px;
+}
+
+.contact-info .info-item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info .info-item i {
+  background-color: var(--color-two);
+  color: #2c3e50;
+  padding: 20px 20px;
+  margin-right: 25px;
+}
+
+.contact-info .info-item strong {
+  font-size: 25px;
+  font-weight: 450;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1228px) {
+  .contact-info .info-item {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-section .col-md-4 {
+    max-width: 100%;
+    flex: 100%;
+  }
+
+  .contact-section .col-md-8 {
+    max-width: 100%;
+    flex: 100%;
+  }
+
+  .button {
+    margin-bottom: 25px;
+  }
+
+  .contact-info .info-item {
+    display: flex;
+  }
+}

@@ -1,0 +1,129 @@
+.container {
+  margin-top: 20px;
+}
+
+.header-bottom {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.order-summary {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.order-summary .total {
+  color: var(--color-one);
+  font-weight: bold;
+}
+
+.order-summary .btn {
+  background-color: var(--color-one);
+  color: white;
+  font-weight: bold;
+  padding: 20px 30px;
+}
+
+.order-summary .btn:hover {
+  opacity: 0.8;
+}
+
+.order-summary .order-infor {
+  display: flex;
+  align-items: center;
+}
+
+.order-summary .order-infor .media-left {
+  margin-right: 20px;
+}
+
+.order-summary .order-infor .item-content p {
+  margin-bottom: 5px;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+}
+
+.form-control {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.form-check {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-check .delivery-fee {
+  color: #000000;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.form-check-label {
+  font-size: 17px;
+  color: black;
+  font-weight: 450;
+  margin-left: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.form-check-input {
+  padding: 10px;
+}
+
+/* Modal */
+.modal-content {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.success-icon {
+  font-size: 60px;
+  color: #28a745;
+}
+.success-message {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.sub-message {
+  color: #666;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.btn-custom {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.btn-outline-custom {
+  border-color: #cccccc;
+  color: #666666;
+}
+.btn-outline-custom:hover {
+  background-color: #f1f1f1;
+}
+.btn-primary-custom {
+  background-color: var(--color-one);
+  border-color: var(--color-one);
+  color: #fff;
+}
+.btn-primary-custom:hover {
+  background-color: var(--color-one);
+  border-color: var(--color-one);
+}

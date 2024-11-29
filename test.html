@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/pay.css" />
+
+    <style>
+      .container {
+  margin-top: 20px;
+}
+
+.section-title {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.order-summary {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.order-summary .total {
+  color: var(--color-one);
+  font-weight: bold;
+}
+
+.order-summary .btn {
+  background-color: var(--color-one);
+  color: white;
+  font-weight: bold;
+  padding: 20px 30px;
+}
+
+.order-summary .btn:hover {
+  opacity: 0.8;
+}
+
+.order-summary .order-infor {
+  display: flex;
+  align-items: center;
+}
+
+.order-summary .order-infor .media-left {
+  margin-right: 20px;
+}
+
+.order-summary .order-infor .item-content p {
+  margin-bottom: 5px;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+}
+
+.form-control {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.form-check {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-check .delivery-fee {
+  color: #000000;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.form-check-label {
+  font-size: 17px;
+  color: black;
+  font-weight: 450;
+  margin-left: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.form-check-input {
+  padding: 10px;
+}
+
+.modal-content {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.success-icon {
+  font-size: 60px;
+  color: #28a745;
+}
+.success-message {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.sub-message {
+  color: #666;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.btn-custom {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.btn-outline-custom {
+  border-color: #cccccc;
+  color: #666666;
+}
+.btn-outline-custom:hover {
+  background-color: #f1f1f1;
+}
+.btn-primary-custom {
+  background-color: #ff6600;
+  border-color: #ff6600;
+  color: #fff;
+}
+.btn-primary-custom:hover {
+  background-color: #e65c00;
+  border-color: #e65c00;
+}
+
+    </style>
+
+    <title>Pay E-Tech</title>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <div class="row">
+          <!-- Left Column -->
+          <div class="col-md-7">
+            <div class="section-title">THÔNG TIN GIAO HÀNG</div>
+            <form>
+              <!-- Form Inputs -->
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="HỌ TÊN" required />
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email" required />
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Địa chỉ" required />
+              </div>
+            </form>
+            <div class="section-title">PHƯƠNG THỨC THANH TOÁN</div>
+            <form>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="payMethod1" />
+                <label class="form-check-label" for="payMethod1">Thanh toán khi nhận hàng</label>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-md-5">
+            <div class="order-summary">
+              <div class="section-title">ĐƠN HÀNG</div>
+              <hr />
+              <div class="d-flex justify-content-between total">
+                <span>TỔNG CỘNG</span>
+                <span>1.150.000 VND</span>
+              </div>
+              <button id="submitOrder" class="btn btn-block mt-3 btn-primary">
+                HOÀN TẤT ĐẶT HÀNG
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="success-message">Đặt hàng thành công!</div>
+          <div class="sub-message">Chúng tôi sẽ liên hệ Quý khách để xác nhận đơn hàng trong thời gian sớm nhất!</div>
+          <div>
+            <button class="btn btn-outline-custom btn-custom" onclick="window.location.href='order-detail.html';">Xem chi tiết đơn hàng</button>
+            <button class="btn btn-primary-custom btn-custom" data-bs-dismiss="modal">Tiếp tục mua hàng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script>
+      document.getElementById('submitOrder').addEventListener('click', function () {
+        const modal = new bootstrap.Modal(document.getElementById('successModal'));
+        modal.show();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+.form .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.form .form-box {
+  width: 45%;
+}
+
+.form .form-box h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form .form-box label {
+  font-size: 1rem;
+  margin-top: 1px;
+}
+
+.form-box input[type="text"],
+.form-box input[type="password"],
+.form-box input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form .form-box input[type="checkbox"] {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.form-box .form-check {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form .form-box .btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.form .form-box .btn:hover {
+  background-color: #c0392b;
+}
+
+.form .form-box .forgot-password {
+  margin-top: 0;
+}
+
+.form-box .forgot-password a {
+  color: #7f8c8d;
+  text-decoration: none;
+}
+
+.form .form-box .forgot-password a:hover {
+  color: var(--color-one);
+}
+
+.form .form-box p {
+  margin-top: 26px;
+  margin-bottom: 1rem;
+}
+
+.form  .form-box .note {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-top: 25px;
+}
+
+@media (max-width: 513px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form .form-box {
+    width: 100%;
+  }
+
+  .form .form-box .btn {
+    margin-bottom: 25px;
+  }
+}

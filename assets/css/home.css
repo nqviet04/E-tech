@@ -144,6 +144,7 @@
 
   .header-top-right {
     margin-top: 10px;
+    justify-content: center;
   }
 }
 
@@ -717,6 +718,12 @@ span.carousel-control-next-icon {
 
 .popular-categories .category-card:hover .icon-wrapper {
   background-color: var(--color-two);
+}
+
+@media (max-width: 768px) {
+  .popular-categories .btn {
+    margin-bottom: 25px;
+  }
 }
 /* End Popular Categories */
 
